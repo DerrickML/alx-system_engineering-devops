@@ -19,4 +19,5 @@ All of the following folders are projects done during the studies:
 | [`0x05-processes_and_signals`](https://github.com/DeroMal/alx-system_engineering-devops/tree/master/0x05-processes_and_signals) | It aims to learn about PID, processes and commands that handles them (`ps`, `pgrep`, `pkill`, `kill`, etc) in **Bash** |
 | [`0x06-regular_expressions`](https://github.com/DeroMal/alx-system_engineering-devops/edit/master/0x06-regular_expressions/README.md) | It aims to learn about how to build a regular expression |
 | [`0x07-networking_basics`](https://github.com/DeroMal/alx-system_engineering-devops/edit/master/0x07-networking_basics/README.md) | It aims to learn about what is an OSI model, LAN, WAN, IP address, localhost, subnet and TCP/UDP |
+| [`0x08-networking_basics_2`](https://github.com/DeroMal/alx-system_engineering-devops/edit/master/0x08-networking_basics_2/README.md) | It aims to learn about what is localhost/127.0.0.1, what is 0.0.0.0, what is `/etc/hosts` and how to display the machine's active network interfaces |
 
