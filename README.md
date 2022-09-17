@@ -21,4 +21,5 @@ All of the following folders are projects done during the studies:
 | [`0x07-networking_basics`](https://github.com/DeroMal/alx-system_engineering-devops/edit/master/0x07-networking_basics/README.md) | It aims to learn about what is an OSI model, LAN, WAN, IP address, localhost, subnet and TCP/UDP |
 | [`0x08-networking_basics_2`](https://github.com/DeroMal/alx-system_engineering-devops/edit/master/0x08-networking_basics_2/README.md) | It aims to learn about what is localhost/127.0.0.1, what is 0.0.0.0, what is `/etc/hosts` and how to display the machine's active network interfaces |
 | [`0x09-web_infrastructure_design`](https://github.com/DeroMal/alx-system_engineering-devops/edit/master/0x09-web_infrastructure_design/README.md) | It aims to learn about how to design a Web Infrastructure |
+| [`0x0A-configuration_management`](https://github.com/DeroMal/alx-system_engineering-devops/edit/master/0x0A-configuration_management/README.md) | It aims to learn about server configuration management using **Puppet** |
 
