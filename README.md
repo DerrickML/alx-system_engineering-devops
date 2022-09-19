@@ -23,3 +23,6 @@ All of the following folders are projects done during the studies:
 | [`0x09-web_infrastructure_design`](https://github.com/DeroMal/alx-system_engineering-devops/edit/master/0x09-web_infrastructure_design/README.md) | It aims to learn about how to design a Web Infrastructure |
 | [`0x0A-configuration_management`](https://github.com/DeroMal/alx-system_engineering-devops/edit/master/0x0A-configuration_management/README.md) | It aims to learn about server configuration management using **Puppet** |
 | [`0x0B-ssh`](https://github.com/DeroMal/alx-system_engineering-devops/edit/master/0x0B-ssh/README.md) | It aims to learn about what is a SSH, how to create an SSH RSA key pair and how to connect to a remote host using SSH |
+| [`0x0C-web_server`](https://github.com/DeroMal/alx-system_engineering-devops/edit/master/0x0C-web_server/README.md) | It aims to learn about the roles of web servers and their processes (parent and child), and DNS roles |
+| [`0x0D-web_stack_debugging_0`](https://github.com/DeroMal/alx-system_engineering-devops/tree/master/0x0D-web_stack_debugging_0) | It aims to learn about how to debug a webstack |
+
