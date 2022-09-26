@@ -1,10 +1,43 @@
 #!/usr/bin/env bash
-# Setup a load balancer connected to two other servers
-sudo apt-get update
-sudo apt-get install -y haproxy
-sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
-sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.copy
-sudo sed -i '$a\\nlisten appname 0.0.0.0:80\n\tmode http\n\tstats enable' /etc/haproxy/haproxy.cfg
-sudo sed -i '$a\\tbalance roundrobin\n\toption httpclose\n\toption forwardfor' /etc/haproxy/haproxy.cfg
-sudo sed -i '$a\\tserver 24857-web-01 44.192.74.79\n\tserver 24857-web-02 44.200.28.66' /etc/haproxy/haproxy.cfg
-sudo service haproxy start
+# Installs HAProxy version 1.8 with the following configurations:
+#+    Enables management via the init script.
+#+    Distributes requests using a round-robin algorithm.
+
+apt-get install -y software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy
+apt-get update
+apt-get install -y haproxy
+
+echo "ENABLED=1" >> /etc/default/haproxy
+mv /etc/haproxy/haproxy.cfg{,.original}
+touch /etc/haproxy/haproxy.cfg
+
+printf %s "global
+    log 127.0.0.1 local0 notice
+    maxconn 2000
+    user haproxy
+    group haproxy
+defaults
+    log     global
+    mode    http
+    option  httplog
+    option  dontlognull
+    retries 3
+    option redispatch
+    timeout connect  5000
+    timeout client  10000
+    timeout server  10000
+listen abnb
+    bind 0.0.0.0:80
+    mode http
+    stats enable
+stats uri /haproxy?stats
+    balance roundrobin
+    option httpclose
+    option forwardfor
+    server 375-web-01 44.192.74.79:80 check
+    server 375-web-02 44.200.28.66:80 check
+" >> /etc/haproxy/haproxy.cfg
+
+service haproxy start
+                      
